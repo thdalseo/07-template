@@ -1,0 +1,218 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+* {
+    margin: 0px;    /*바깥쪽 여백 설정*/
+    padding: 0px;   /*안쪽 여백 설정*/
+    box-sizing: border-box;
+}
+ul, ol {    /*목록 꾸며주기 효과 제거*/
+    list-style: none;
+}
+a { /*링크 꾸며주기 효과 제거*/
+    text-decoration: none;
+}
+
+section {
+    width: 340px;
+    padding: 30px;
+    background-color: #fff;
+    margin: 150px auto;  /*상하 여백 50px, 가운데 정렬*/
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);  /*그림자 설정*/
+    border-radius: 10px; /*모서리 둥글게 설정*/
+}
+
+section nav.menu {
+    width: 100%;    /*부모 요소인 section의 100%*/
+}
+section nav.menu::after { /*float 해제*/
+    content:" ";
+    display: block;
+    clear: both;
+}
+section nav.menu a {
+    font-size: 20px;
+    color: #666;
+    
+}
+section nav.menu a:nth-of-type(1) {
+    float: left;
+}
+section nav.menu a:nth-of-type(2) {
+    float: right;
+}
+
+section article.profile {
+    width: 100%;
+    text-align: center;
+}
+section article.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+section article.profile h1{
+    font-weight: bold;
+    font-size: 22px;
+    font-family: "arial";
+    line-height: 1;
+    color: #555;
+    margin-bottom: 5px;
+}
+section article.profile h2{
+    font-weight: normal;
+    font-size: 12px;
+    font-family: "arial";
+    color: #bbb;
+}
+section article.profile h2:nth-of-type(1) {
+    margin-bottom: 5px;
+}
+section article.profile h2:nth-of-type(2) {
+    margin-bottom: 30px;
+}
+section a.btnView {
+    display: block;
+    width: 180px;
+    height: 32px;
+    margin: 0px auto 20px;
+    background: #444;
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 10px;
+    font-family: "arial";
+    color: #fff;
+    line-height: 32px;
+    text-align: center;
+}
+
+section ul.contact {
+    margin-bottom: 25px;
+}
+section ul.contact li { /*하단 테두리 설정*/
+    width: 100%;
+    padding: 10px 0px;
+    border-bottom: 1px solid #e1e1e1;
+}
+section ul.contact li:last-child{ /*마지막 목록 하단 테두리 제거*/
+    border-bottom: none;
+}
+section ul.contact li i { /*아이콘 설정*/
+    width: 20%;
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+    text-shadow: 2px 2px 2px #ddd;
+}
+section ul.contact li span { /*문자 설정*/
+    font-weight: normal;
+    font-size: 11px;
+    font-family: "orbitron";
+    color: #555;
+    letter-spacing: 1px; /*문자 간격*/
+}
+
+/*프로필 링크 버튼*/
+section nav.members {
+    width: 100%;
+    text-align: center;
+}
+section nav.members a {
+    display: inline-block; /*너비, 높이 설정 위해 인라인-블록 속성을 갖도록*/
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0px 10px;   /*좌우 여백 설정*/
+    opacity: 0.4;   /*투명도 설정*/
+    filter: saturate(0.7);  /*채도 낮게 변경*/
+}
+
+/*순서 선택자로 배경색, 그림자 색 설정*/
+section nav.members a:nth-of-type(1) {
+    background-color:#edaac9 ;
+    box-shadow: 5px 5px 10px #edaac9;
+}
+section nav.members a:nth-of-type(2) {
+    background-color:#aa75c7 ;
+    box-shadow: 5px 5px 10px #aa75c7;
+}
+section nav.members a:nth-of-type(3) {
+    background-color:#aebdff ;
+    box-shadow: 5px 5px 10px #aebdff;
+}
+section nav.members a:nth-of-type(4) {
+    background-color:#e3948b ;
+    box-shadow: 5px 5px 10px #e3948b;
+}
+section nav.members a:nth-of-type(5) {
+    background-color:#9ce3b9 ;
+    box-shadow: 5px 5px 10px #9ce3b9;
+}
+
+section nav.members a.on { /*활성화 된 버튼만*/
+    opacity: 1;
+    filter: saturate(1);
+    box-shadow: none;
+}
+
+/*member1*/
+body.member1 {
+    background-color: #edaac9;
+}
+body.member1 section article.profile img{
+    box-shadow: 5px 15px 30px #edaac9;
+}
+body.member1 section a.btnView {
+    background: linear-gradient(45deg,#edaac9,#aa75c7);
+    box-shadow: 5px 10px 20px #edaac9;
+}
+
+/*member2*/
+body.member2 {
+    background-color: #aa75c7;
+}
+body.member2 section article.profile img{
+    box-shadow: 5px 15px 30px #aa75c7;
+}
+body.member2 section a.btnView {
+    background: linear-gradient(45deg,#aa75c7,#aebdff);
+    box-shadow: 5px 10px 20px #aa75c7;
+}
+
+/*member3*/
+body.member3 {
+    background-color: #aebdff;
+}
+body.member3 section article.profile img{
+    box-shadow: 5px 15px 30px #aebdff;
+}
+body.member3 section a.btnView {
+    background: linear-gradient(45deg,#aebdff,#e3948b);
+    box-shadow: 5px 10px 20px #aebdff;
+}
+
+/*member4*/
+body.member4 {
+    background-color: #e3948b;
+}
+body.member4 section article.profile img{
+    box-shadow: 5px 15px 30px #e3948b;
+}
+body.member4 section a.btnView {
+    background: linear-gradient(45deg,#e3948b,#9ce3b9);
+    box-shadow: 5px 10px 20px #e3948b;
+}
+
+/*member5*/
+body.member5 {
+    background-color: #9ce3b9;
+}
+body.member5 section article.profile img{
+    box-shadow: 5px 15px 30px #9ce3b9;
+}
+body.member5 section a.btnView {
+    background: linear-gradient(45deg,#9ce3b9,#edaac9);
+    box-shadow: 5px 10px 20px #9ce3b9;
+}
